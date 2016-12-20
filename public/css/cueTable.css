@@ -1,0 +1,110 @@
+.cueTable {
+    font-family: Calluna Sans;
+    border-collapse:collapse;
+}
+th.cuesHeader {
+    font-size:9.5pt;
+    text-transform: uppercase;
+}
+td.activeSelector {
+    width:26pt;
+}
+th.activeSelector {
+    width:26pt;
+}
+td.type {
+    width:18pt;
+}
+th.type {
+    width:18pt;
+}
+td.number {
+    font-size:10pt;
+    width:30pt;
+    text-align:center;
+}
+th.number {
+    width:30pt;
+}
+td.indent {
+    width:11.25pt;
+}
+th.indent {
+    width:11.25pt;
+    text-align:left;
+}
+td.cueName {
+    font-size:10pt;
+    width:135pt;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width:135pt;
+}
+th.cueName {
+    width:135pt;
+    text-align:left;
+}
+td.target {
+    font-size:9pt;
+    width:72pt;
+    text-align: center;
+}
+th.target {
+    width:72pt;
+}
+td.preWait {
+    font-size:9pt;
+    width:66pt;
+    text-align:center;
+}
+th.preWait {
+    width:66pt;
+}
+td.action {
+    font-size:9pt;
+    width:66pt;
+    text-align:center;
+}
+th.action {
+    width:66pt;
+}
+td.postWait {
+    font-size:9pt;
+    width:66pt;
+    text-align:center;
+}
+th.postWait {
+    width:66pt;
+}
+td.autoContinue {
+    width:16pt;
+}
+th.autoContinue {
+    width:16pt;
+}
+.qicons {
+    font-size:13pt;
+    font-family: 'QLab 3 Icons';
+    text-align:center;
+    baseline-shift: 1pt;
+}
+th.qicons {
+    font-size:13pt;
+}
+tbody.striped > tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.03)
+}
+tbody.striped > tr > td {
+    border: 0;
+    padding:0;
+}
+.roundedSquare {
+    border:0.5pt solid black;
+    border-radius:4pt;
+    text-align: center;
+    white-space: nowrap;
+}
+.inline {
+    display: inline-block;
+}
