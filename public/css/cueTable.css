@@ -1,3 +1,11 @@
+@font-face {
+    font-family: Calluna Sans;
+    src: url(/public/fonts/CallunaSansRegular-webfont.woff)
+}
+@font-face {
+    font-family: 'QLab 3 Icons';
+    src: url(/public/fonts/QLab3Icons-Regular.otf)
+}
 .cueTable {
     font-family: Calluna Sans;
     border-collapse:collapse;
@@ -107,4 +115,20 @@ tbody.striped > tr > td {
 }
 .inline {
     display: inline-block;
+}
+@media print {
+    .print-only {
+        display: inherit;
+    }
+    .screen-only {
+        display: none;
+    }
+}
+@media screen {
+    .print-only {
+        display: none;
+    }
+    .screen-only {
+        display: inherit;
+    }
 }

@@ -5,9 +5,6 @@ import React from 'react';
 export default class Table extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            cues:require("./../cues.js")
-        };
         this.typeLookup = {
             audio:"a",
             group:"g",
@@ -122,7 +119,7 @@ export default class Table extends React.Component {
                 </tr>
                 </thead>
                 <tbody className="striped">
-                {this.renderCueTree(this.state.cues,0)}
+                {this.renderCueTree(this.props.cues,0)}
                 </tbody>
             </table>
         )
