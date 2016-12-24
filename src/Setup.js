@@ -52,6 +52,7 @@ export default class Setup extends React.Component {
                     <div className="form-group">
                         <label>Workspace</label>
                         <select className="form-control" value={this.state.selectedWorkspace} onChange={this.onChange.bind(this,'selectedWorkspace')}>
+                            <option value="" />
                             {this.state.workspaces.map((item)=>{
                                 return (
                                     <option value={item.uniqueID}>{item.displayName}</option>

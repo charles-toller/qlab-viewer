@@ -58,9 +58,9 @@ export default class Table extends React.Component {
         }
         return minutes + ":" + secs + "." + millis;
     }
-    renderCueTree(tree,indentLevel) {
+    renderCueTree(tree,indentLevel,endAtLevel) {
         console.log("running renderCueTree at indentLevel "+indentLevel);
-        let y = tree.map((cue)=>{
+        let y = tree.map((cue,index,arr)=>{
             let a = [];
             let targetWidth = 9;
             while(this.getWidthOfTextAtFont(cue.target,targetWidth+"pt 'Calluna Sans'") > 96) {
@@ -78,12 +78,12 @@ export default class Table extends React.Component {
                         let b = [];
                         for(let i = 0;i<indentLevel;i++) {
                             b.push(
-                                <td className="indent" />
+                                <td className={"indent indent-"+i+" "+(((index + 1) == arr.length && cue.type != "group" && endAtLevel <= i) ? "indent-end-"+(endAtLevel+1):"")} />
                             )
                         }
                         return b;
                     })()}
-                    <td colSpan={"" + (5-indentLevel)} className="cueName">{cue.name}</td>
+                    <td colSpan={"" + (5-indentLevel)} className={"cueName " + (cue.type == "group" ? "group-start-"+(indentLevel+1):((index + 1) == arr.length ? "group-end-"+(endAtLevel+1):(indentLevel > 0) ? "group-part":""))}>{cue.name}</td>
                     <td className="target" style={{fontSize:targetWidth+"pt"}}>{cue.target}</td>
                     <td className="preWait">{this.renderTimeFromSeconds(cue.preWait)}</td>
                     <td className="action">{this.renderTimeFromSeconds(cue.action)}</td>
@@ -92,7 +92,7 @@ export default class Table extends React.Component {
                 </tr>
             );
             if(cue.type == "group") {
-                a = a.concat(this.renderCueTree(cue.children,indentLevel+1));
+                a = a.concat(this.renderCueTree(cue.children,indentLevel+1,((index + 1) == arr.length ? endAtLevel:indentLevel)));
             }
             return a;
         });
@@ -119,7 +119,7 @@ export default class Table extends React.Component {
                 </tr>
                 </thead>
                 <tbody className="striped">
-                {this.renderCueTree(this.props.cues,0)}
+                {this.renderCueTree(this.props.cues,0,0)}
                 </tbody>
             </table>
         )

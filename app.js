@@ -10,12 +10,27 @@ app.get('/',(req,res)=>{
     res.sendFile(__dirname+"/index.html");
 });
 app.get('/:ipAddress/workspaces',(req,res)=>{
+    if(req.params.ipAddress == "test") {
+        res.send(JSON.stringify({
+            args:[JSON.stringify({
+                data:[{
+                    displayName:"test",
+                    uniqueID:"test"
+                }]
+            })]
+        }));
+        return;
+    }
     let connection = new (require("./oscManager"))().getConnection(req.params.ipAddress);
     connection.sendMsgWithCallback("/workspaces",[],"/reply/workspaces",(message)=>{
         res.send(JSON.stringify(message));
     });
 });
 app.get('/:ipAddress/:workspace/cueData',(req,res)=> {
+    if(req.params.ipAddress == "test" && req.params.workspace == "test") {
+        res.send(JSON.stringify(require("./cues.json")));
+        return;
+    }
     let connection = new (require("./oscManager"))().getConnection(req.params.ipAddress);
     let newCues = [];
     let gCueLists = [];

@@ -1,0 +1,68 @@
+[
+  {
+    "type":"audio",
+    "name":"Audio",
+    "number":1,
+    "target":"audio.wav",
+    "preWait":0,
+    "duration":71.02,
+    "postWait":0,
+    "continueMode":2
+  },{
+  "type":"group",
+  "name":"some group",
+  "number":2,
+  "target":"",
+  "preWait":0,
+  "postWait":0,
+  "continueMode":0,
+  "children":[
+    {
+      "type":"audio",
+      "name":"some group audio",
+      "number":2.36,
+      "target":"some group.mp3",
+      "preWait":0,
+      "duration":198.61,
+      "postWait":0,
+      "continueMode":1
+    },{
+      "type":"osc",
+      "name":"communication",
+      "number":2.5,
+      "target":"Soundboard",
+      "preWait":0,
+      "postWait":0,
+      "continueMode":1
+    },{
+      "type":"osc",
+      "name":"other communication",
+      "number":"",
+      "target":"Soundboard",
+      "preWait":0,
+      "postWait":0,
+      "continueMode":0
+    },{
+      "type":"group",
+      "name":"nested group",
+      "number":3,
+      "target":"",
+      "preWait":0,
+      "postWait":0,
+      "continueMode":0,
+      "children":[
+        {
+          "type":"audio",
+          "name":"other audio",
+          "number":6,
+          "target":"other audio.mp4",
+          "preWait":0,
+          "duration":198.61,
+          "postWait":0,
+          "continueMode":1
+        }
+      ]
+    }
+  ]
+}
+]
