@@ -160,6 +160,7 @@ tbody.striped > tr > td {
     border-left: 1pt solid blue;
     border-top: 1pt solid blue;
     border-right: 1pt solid green;
+    padding-left: 2pt !important;
 }
 .group-end-3 {
     border-bottom: 1pt solid blue;
