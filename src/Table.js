@@ -86,7 +86,7 @@ export default class Table extends React.Component {
                     <td colSpan={"" + (5-indentLevel)} className={"cueName " + (cue.type == "group" ? "group-start-"+(indentLevel+1):((index + 1) == arr.length ? "group-end-"+(endAtLevel+1):(indentLevel > 0) ? "group-part":""))}>{cue.name}</td>
                     <td className="target" style={{fontSize:targetWidth+"pt"}}>{cue.target}</td>
                     <td className="preWait">{this.renderTimeFromSeconds(cue.preWait)}</td>
-                    <td className="action">{this.renderTimeFromSeconds(cue.action)}</td>
+                    <td className="action">{cue.action === 0 ? this.renderTimeFromSeconds(cue.action):""}</td>
                     <td className="postWait">{this.renderTimeFromSeconds(cue.postWait)}</td>
                     <td className="autoContinue qicons">{this.continueLookup[cue.continueMode]}</td>
                 </tr>

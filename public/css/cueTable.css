@@ -101,7 +101,7 @@ th.qicons {
     font-size:13pt;
 }
 tbody.striped > tr:nth-child(even) {
-    background-color: rgba(0,0,0,0.03)
+    background-color: rgba(0,0,0,0.07)
 }
 tbody.striped > tr > td {
     padding:0;
