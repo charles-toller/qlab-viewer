@@ -36,6 +36,9 @@ export default class Headline extends React.Component {
                         <label>Tagline</label>
                         <input value={this.state.tagLine} onChange={this.onChange.bind(this,'tagLine')} />
                     </div>
+                    <div>
+                        <button onClick={window.print} className="btn btn-success">Print</button>
+                    </div>
                 </div>
             </div>
         )
