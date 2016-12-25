@@ -6,10 +6,6 @@ require("./app.js");
 const {app, BrowserWindow} = require('electron');
 let win = null;
 app.on('ready',()=>{
-    win = new BrowserWindow({
-        webPreferences:{
-            nodeIntegration:false
-        }
-    });
+    win = new BrowserWindow();
     win.loadURL("http://localhost:3000");
 });

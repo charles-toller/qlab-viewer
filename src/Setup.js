@@ -2,6 +2,7 @@
  * Created by Charles on 12/21/2016.
  */
 import React from 'react';
+let $ = require('jquery');
 export default class Setup extends React.Component {
     constructor(props) {
         super(props);

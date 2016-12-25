@@ -7,6 +7,7 @@ import Table from './Table.js';
 import CueTypes from './CueTypes.js';
 import Headline from './Headline.js';
 import Setup from './Setup.js';
+let $ = require('jquery');
 export default class Application extends React.Component {
     constructor(props) {
         super(props);
