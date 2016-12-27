@@ -8,4 +8,10 @@ let win = null;
 app.on('ready',()=>{
     win = new BrowserWindow();
     win.loadURL("http://localhost:3000");
+    win.on('close',()=>{
+        win = null;
+    })
+});
+app.on('window-all-closed',()=>{
+    app.quit();
 });
