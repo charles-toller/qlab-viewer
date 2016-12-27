@@ -4,8 +4,8 @@
 let express = require('express');
 let app = express();
 let async = require('async');
-app.use("/dist",express.static("dist"));
-app.use("/public",express.static("public"));
+app.use("/dist",express.static(__dirname+"/dist"));
+app.use("/public",express.static(__dirname+"/public"));
 app.get('/',(req,res)=>{
     res.sendFile(__dirname+"/index.html");
 });
