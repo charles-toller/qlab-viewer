@@ -23,11 +23,7 @@
     "osc": "colinbdclark/osc.js#016b602c61fc3074c6bb9486ff1cac9cced51f5b",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "vmodule": "^1.0.1",
     "webpack": "^1.14.0"
-  },
-  "devDependencies": {
-    "electron": "^1.4.13",
-    "electron-packager": "^8.4.0",
-    "electron-rebuild": "^1.4.0"
   }
 }

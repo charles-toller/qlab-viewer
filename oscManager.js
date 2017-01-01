@@ -2,7 +2,6 @@
  * Created by Charles Toller on 12/18/2016.
  */
 let instance = null;
-let osc = require('osc');
 let OSCConnection = require("./oscConnection.js");
 class OSCManager {
     constructor() {

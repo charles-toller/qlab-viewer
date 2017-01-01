@@ -1,6 +1,8 @@
 /**
  * Created by Charles Toller on 12/18/2016.
  */
+let vmodule = require('vmodule');
+vmodule('serialport',{},{global:true});
 let osc = require('osc');
 class OSCConnection {
     constructor(ipAddress) {
