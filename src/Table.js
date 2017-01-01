@@ -83,7 +83,7 @@ export default class Table extends React.Component {
                         }
                         return b;
                     })()}
-                    <td colSpan={"" + (5-indentLevel)} className={"cueName " + (cue.type == "group" ? "group-start-"+(indentLevel+1):((index + 1) == arr.length ? "group-end-"+(endAtLevel+1):(indentLevel > 0) ? "group-part":""))}>{cue.name}</td>
+                    <td colSpan={"" + (5-indentLevel)} className={"cueName " + (cue.type == "group" ? "group-start-"+(indentLevel+1):((index + 1) == arr.length ? "group-end-"+(endAtLevel+1):(indentLevel > 0) ? "group-part":"")) + (cue.type == "group" && cue.children.length === 0 ? " group-end-"+(indentLevel+1):"")}>{cue.name}</td>
                     <td className="target" style={{fontSize:targetWidth+"pt"}}>{cue.target}</td>
                     <td className="preWait">{this.renderTimeFromSeconds(cue.preWait)}</td>
                     <td className="action">{cue.action !== 0 ? this.renderTimeFromSeconds(cue.action):""}</td>
