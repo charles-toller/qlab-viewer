@@ -15,6 +15,9 @@ class OSCConnection {
         });
         this.connection.on("bundle",this.onBundle.bind(this));
         this.connection.on("message",this.onMessage.bind(this));
+        this.connection.on("error",(err)=>{
+            console.error(err);
+        });
         this.connection.open();
         this.onBundleCb = null;
         this.onMessageCb = null;
